@@ -51,12 +51,12 @@ if uploaded_file is not None:
     # 클래스별 확률을 HTML과 CSS로 시각화
     st.markdown("<h3>클래스별 확률:</h3>", unsafe_allow_html=True)
 
-    # if prediction == labels[0]:
-    #     st.write("중냉 꿋굿")
-    # elif prediction == labels[1]:
-    #     st.write("짜장면은 굿")
-    # elif prediction == labels[2]:
-    #     st.write("짬뽕은 맵지만 맛있어!!")
+    if prediction == labels[0]:
+         st.write("중냉 꿋굿")
+    elif prediction == labels[1]:
+         st.write("짜장면은 굿")
+    elif prediction == labels[2]:
+         st.write("짬뽕은 맵지만 맛있어!!")
 
     for label, prob in zip(labels, probs):
         # HTML 및 CSS로 확률을 시각화
